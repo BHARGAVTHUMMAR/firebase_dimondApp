@@ -1,0 +1,29 @@
+name: test_dimond
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter project.
+environment: 
+  sdk: '>=2.18.5 <3.0.0'
+
+dependencies: 
+  firebase_auth: any
+  fluttertoast: any
+  get_storage:
+  curved_navigation_bar:
+  firebase_core: any
+  dropdown_textfield:
+  firebase_storage: any
+  cloud_firestore: any
+  cupertino_icons: ^1.0.2
+  get: 4.6.5
+  flutter: 
+    sdk: flutter
+
+dev_dependencies: 
+  flutter_lints: ^2.0.0
+  flutter_test: 
+    sdk: flutter
+
+flutter: 
+  uses-material-design: true
+
