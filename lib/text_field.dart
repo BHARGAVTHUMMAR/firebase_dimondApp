@@ -27,11 +27,14 @@ TextFormField getTextField({
   FormFieldValidator<String>? validation,
   double fontSize = 15,
   double hintFontSize = 14,
+  FocusNode? focusNode,
+  void Function(String)? onFieldSubmitted,
   TextCapitalization textCapitalization = TextCapitalization.none,
 }) {
   return TextFormField(
     controller: textEditingController,
     obscureText: textVisible,
+    focusNode: focusNode,
     textInputAction: textInputAction,
     keyboardType: textInputType,
     textCapitalization: textCapitalization,
@@ -41,6 +44,7 @@ TextFormField getTextField({
     onTap: onTap,
     maxLines: maxLine,
     onChanged: onChange,
+    onFieldSubmitted: onFieldSubmitted,
     style: TextStyle(
       fontSize: MySize.getHeight(fontSize),
     ),

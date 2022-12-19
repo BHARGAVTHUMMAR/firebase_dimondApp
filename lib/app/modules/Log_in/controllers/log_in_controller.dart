@@ -10,6 +10,8 @@ import 'package:test_dimond/main.dart';
 class LogInController extends GetxController {
   Rx<TextEditingController> mailController = TextEditingController().obs;
   Rx<TextEditingController> passwordController = TextEditingController().obs;
+  FocusNode mailFocus = FocusNode();
+  FocusNode passwordFocus = FocusNode();
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
   String? errorMessage;
   final auth = FirebaseAuth.instance;

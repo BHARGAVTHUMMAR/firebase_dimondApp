@@ -41,10 +41,15 @@ class LogInView extends GetView<LogInController> {
                   Space.height(50),
                   getTextField(
                       textEditingController: controller.mailController.value,
+                      focusNode: controller.mailFocus,
                       prefixIcon: Icon(
                         Icons.email_outlined,
                         color: appTheme.primaryTheme,
                       ),
+                      onFieldSubmitted: (val) {
+                        FocusScope.of(context)
+                            .requestFocus(controller.passwordFocus);
+                      },
                       textCapitalization: TextCapitalization.sentences,
                       labelText: "Email",
                       validation: (val) {
@@ -59,6 +64,7 @@ class LogInView extends GetView<LogInController> {
                   ),
                   getTextField(
                     labelText: "Password",
+                    focusNode: controller.passwordFocus,
                     textEditingController: controller.passwordController.value,
                     validation: (val) {
                       if (val!.isEmpty) {
